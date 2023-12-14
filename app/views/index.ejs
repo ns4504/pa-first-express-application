@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <style>
+            html {
+                background-color: #011627;
+            }
+
+            img#logo {
+                width: 75px;
+                height: auto;
+            }
+            
+            body {
+                max-width: 50%;
+                text-align: center;
+                background-color: #708090;
+                margin: auto;
+                padding: 35px 25px 183px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            ul li {
+                list-style: none;
+                color: #840032;
+                font-size: 24pt;
+            }
+
+            h1 {
+                font-size: 36pt;
+                color:#d87093;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><u><%= title %></u></h1>
+        <ul>
+            <% defs.forEach(function(def) { %>
+                <li>
+                    <%= def.name %>: <%= def.desc %>
+                </li>
+            <% }); %>
+        </ul>
+    </br></br>
+        <h1><u>Page Created By</u>: <%= myname %></h1>
+    </body>
+</html>
